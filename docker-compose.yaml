@@ -1,0 +1,11 @@
+version: "2"
+services:
+  mlflow:
+    image: mlops-mlflow
+    build:
+      context: .
+      dockerfile: "Dockerfile"
+    volumes:
+      - ./:/var/lib/mlflow/
+    ports:
+      - '5000:5000'
